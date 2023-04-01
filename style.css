@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #4c6986;
+}
+
+.wrapper {
+   height: 600px;
+   max-width: 1440px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 auto;
+   padding: 40px;
+}
+
+.restart {
+    border: 5px solid #4c6986;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 48px;
+}
+.restart:hover {
+    background-color: #4c6986;
+    color: white;
+}
+
+.title {
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+.game {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.board-title {
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board-title:not(:nth-child(3n)){
+    border-right: 3px solid rgba(137, 163, 189, 0.5);
+}
+.board-title:not(:nth-last-child(-n+3)){
+    border-bottom: 3px solid rgba(137, 163, 189, 0.5);
+}
+
+.board-title:hover{
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.header{
+    display: flex;
+}
+
+.playerX{
+    flex: 1;
+    border-bottom: 5px solid #eee;
+    font-size: 24px;
+    padding-bottom: 8px;
+}
+
+.playerO{
+    flex: 1;
+    border-bottom: 5px solid #eee;
+    font-size: 24px;
+    padding-bottom: 8px;
+}
+
+.playerX.active {
+    color: #42bed7;
+    border-color: #42bed7;
+}
+
+.playerO.active {
+    color: #d7bafb;
+    border-color: #d7bafb;
+}
+
+.title-x {
+    color: #42bed7;
+}
+
+.title-o{
+    color: #d7bafb;
+}
+
+.title-winner {
+    color: #23ce68;
+}
+
+.winner{
+    color: #23ce68;
+}
+@media all and  (max-width:1300px){
+    .wrapper{
+        flex-direction: column;
+    }
+    .header{
+        margin-top: 50px;
+    }
+}
